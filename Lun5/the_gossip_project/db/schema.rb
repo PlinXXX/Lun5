@@ -10,23 +10,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_04_150714) do
+ActiveRecord::Schema.define(version: 2019_02_05_101120) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "gossips", force: :cascade do |t|
-    t.string "author"
-    t.string "content"
+  create_table "authors", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "date_of_birth"
+    t.string "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  create_table "potins", force: :cascade do |t|
-    t.string "author"
+  create_table "contents", force: :cascade do |t|
+    t.bigint "author_id"
+    t.string "title"
     t.string "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_contents_on_author_id"
   end
 
 end

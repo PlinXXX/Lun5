@@ -1,6 +1,21 @@
-<h1>Welcome <%=params[:first_name]%> !</h1>
-<p>
-	Ici c'est notre super site de potins, il est chouette, non ?
-</p>
+
+	<h1>Welcome <%= @first_name %><%= @last_name %>!</h1>
+	<p>
+		Author : <a href="/welcome/profil/<%= @first_name %>"><%= @first_name %> <%= @last_name %></a>
+		<br>
+		Title : <%= @title %>
+		<br>
+		Content : <%= @content %>
+		<br>
+		Created at : <%= @creation_date %>
+	</p>
 
 
+<!-- 2.6. Afficher un potin
+
+Allez, dernier élément : la page qui affiche les potins. 
+- Chaque potin en base doit avoir une page dédiée, 
+- qui affiche les détails de son auteur (avec un lien pour aller sur la page de l'auteur), 
+- son title, 
+- son content, 
+- puis la date de création. -->

@@ -6,3 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+#  10.times do |n|
+#  	a = Author.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, date_of_birth: Faker::Date.birthday(18, 65), address: 
+# Faker::Address.full_address)
+#   c = Content.create(author: a, title: Faker::Book.title, content: Faker::Book.genre)
+#  end

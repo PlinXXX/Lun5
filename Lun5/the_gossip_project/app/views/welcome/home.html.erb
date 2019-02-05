@@ -1,0 +1,31 @@
+<style type="text/css">
+	.card-body {
+		width: 30%;
+		display: inline-block;
+	}
+	.card {
+		width: auto;
+		display: inline;
+	}
+</style> 
+
+<h1>Welcome ! There are all the potin list in this site, enjoy ! </h1>
+
+<%= @l.times do |n| %>
+	<div class="card">
+	  <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
+	  <div class="card-body">
+	    <h5 class="card-title"><a href="#">Potin <%= n+1 %></a></h5>
+	    <p class="card-text"><ul>   
+			<li> ID : <%= Content.find(n+1).author.id %></li>
+			<li> Author : <%= Content.find(n+1).author.first_name %> </li> 
+			<li> Title : <%= Content.find(n+1).title %> </li>
+		</ul></p>
+	    <a href="/welcome/<%= Content.find(n+1).author.id %>" class="btn btn-primary">more</a>
+	  </div>
+	</div>
+<% end %>
+
+
+
+
