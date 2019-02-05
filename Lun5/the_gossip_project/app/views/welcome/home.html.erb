@@ -4,7 +4,6 @@
 		display: inline-block;
 	}
 	.card {
-		width: auto;
 		display: inline;
 	}
 </style> 
@@ -15,9 +14,8 @@
 	<div class="card">
 	  <!-- <img class="card-img-top" src=".../100px180/" alt="Card image cap"> -->
 	  <div class="card-body">
-	    <h5 class="card-title"><a href="#">Potin <%= n+1 %></a></h5>
-	    <p class="card-text"><ul>   
-			<li> ID : <%= Content.find(n+1).author.id %></li>
+	    <h5 class="card-title">Potin <%= n+1 %></h5>
+	    <p class="card-text"><ul>
 			<li> Author : <%= Content.find(n+1).author.first_name %> </li> 
 			<li> Title : <%= Content.find(n+1).title %> </li>
 		</ul></p>
